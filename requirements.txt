@@ -1,0 +1,13 @@
+Flask
+googletrans==4.0.0-rc1
+gTTS
+opencv-python
+pytesseract
+PyPDF2
+python-docx
+sumy
+urllib3
+nltk
+libgl1-mesa-glx
+json
+pymupdf

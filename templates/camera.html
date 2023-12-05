@@ -1,0 +1,41 @@
+<!-- camera.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Processing</title>
+</head>
+<body>
+    <h1>Camera Processing</h1>
+    <form action="{{ url_for('camera_processing') }}" method="POST">
+        <label for="sentences_count">Enter Sentences Count:</label>
+        <input type="number" name="sentences_count" required>
+        
+        <br>
+        
+        <label for="target_language">Enter Target Language Code:</label>
+        <input type="text" name="target_language" required>
+
+        <br>
+
+        <!-- Add the translation_choice field -->
+        <label for="translation_choice">Translate Summary?</label>
+        <select name="translation_choice" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html>
+
+
+
+
+
+

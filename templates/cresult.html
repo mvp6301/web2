@@ -1,0 +1,37 @@
+<!-- result.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Processing Result</title>
+</head>
+<body>
+    <h1>Camera Processing Result</h1>
+
+    <!-- Display Boxes for Extracted, Summarized, and Translated Text -->
+    <div>
+        <h2>Extracted Text</h2>
+        <p>{{ extracted_text }}</p>
+    </div>
+
+    <div>
+        <h2>Summarized Text</h2>
+        <p>{{ summarized_text }}</p>
+    </div>
+
+    <div>
+        <h2>Translated Text</h2>
+        <p>{{ translated_text }}</p>
+    </div>
+
+    <!-- Audio Player for Translated Text -->
+    {% if audio_data %}
+        <audio controls>
+            <source type="audio/mp3" src="data:audio/mp3;base64,{{ audio_data }}" />
+            Your browser does not support the audio element.
+        </audio>
+    {% endif %}
+</body>
+</html>
